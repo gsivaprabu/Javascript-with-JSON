@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript And JSON</title>
+</head>
+
+<body>
+    <script>
+    var info = {
+        "full_name": "Ray Villalobos",
+        "links": [{
+            "blog": "http://iviewsource.com"
+        }, {
+            "facebook": "http://facebook.com/iviewsource"
+        }, {
+            "youtube": "http://www.youtube.com/planetoftheweb"
+        }, {
+            "podcast": "http://feeds.feedburner.com/authoredcontent"
+        }, {
+            "twitter": "http://twitter.com/planetoftheweb"
+        }],
+        "title": "Staff Author"
+    };
+
+    console.log(info.full_name);
+    console.log(info["full_name"]);
+
+    // Array
+    console.log(info.links[0]);
+    console.log(info.links.twitter);
+
+    </script>
+</body>
+
+</html>
