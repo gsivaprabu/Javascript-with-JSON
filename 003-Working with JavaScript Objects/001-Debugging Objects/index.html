@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>DEBUGGING OBJECTS</title>
+</head>
+
+<body>
+    <script>
+    var info = {
+        "full_name": "Ray Villalobos",
+        "links": [{
+            "blog": "http://iviewsource.com"
+        }, {
+            "facebook": "http://facebook.com/iviewsource"
+        }, {
+            "youtube": "http://www.youtube.com/planetoftheweb"
+        }, {
+            "podcast": "http://feeds.feedburner.com/authoredcontent"
+        }, {
+            "twitter": "http://twitter.com/planetoftheweb"
+        }],
+        "title": "Staff Author"
+    };
+    console.log(info);
+    console.log(info.full_name);
+    console.log(info.title);
+    console.log(info.links);
+    console.log(JSON.stringify(info));
+    console.table(info.links);
+    console.log(info.links[0].blog.length);
+    console.log(info.links[0]);
+    console.log(info.title);
+    console.log(delete(info.title));
+    console.log(info.title);
+    </script>
+</body>
+
+</html>

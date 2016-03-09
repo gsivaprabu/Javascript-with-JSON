@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MODIFY ARRAYS</title>
+</head>
+
+<body>
+    <script>
+    var info = {
+        "full_name": "Ray Villalobos",
+        "links": [{
+            "blog": "http://iviewsource.com"
+        }, {
+            "facebook": "http://facebook.com/iviewsource"
+        }, {
+            "youtube": "http://www.youtube.com/planetoftheweb"
+        }, {
+            "podcast": "http://feeds.feedburner.com/authoredcontent"
+        }, {
+            "twitter": "http://twitter.com/planetoftheweb"
+        }],
+        "title": "Staff Author"
+    };
+
+    console.log(info.company = "Siva");
+
+    console.log(info);
+
+    console.log(info.company = "Facebook");
+
+    console.log(info);
+
+    console.log(delete(info.company));
+
+    console.log(info.company);
+
+    console.table(info.links);
+
+    console.log(delete(info.links[2]));
+
+    console.table(info.links);
+
+    console.log("");
+
+    console.log(info.links.splice(1, 1));
+
+    console.log("");
+
+    console.table(info.links);
+
+    console.log("");
+
+    console.log(info.links.push({"courses": "http://annauniv.edu"}));
+
+    console.log("");
+
+    console.table(info.links);
+
+    </script>
+</body>
+
+</html>

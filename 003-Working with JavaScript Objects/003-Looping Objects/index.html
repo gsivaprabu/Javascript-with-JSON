@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>LOOPING OBJECTS</title>
+</head>
+<h2>Links</h2>
+<ul id="links">
+</ul>
+<script>
+var info = {
+    "full_name": "Ray Villalobos",
+    "title": "Staff Author",
+    "links": {
+        "blog": "http://iviewsource.com",
+        "facebook": "http://facebook.com/iviewsource",
+        "youtube": "http://www.youtube.com/planetoftheweb",
+        "podcast": "http://feeds.feedburner.com/authoredcontent",
+        "twitter": "http://twitter.com/planetoftheweb"
+    }
+};
+
+var output = "";
+for (key in info.links) {
+    console.log(info.links.hasOwnProperty(key));
+    if (info.links.hasOwnProperty(key)) {
+        output += '<li>' + '<a href = "' + info.links[key] + '">' + key + '</a>' + '</li>';
+    } //if the links has the key property
+} // for...go through each link
+
+console.log(output);
+
+var update = document.getElementById('links');
+
+update.innerHTML = output;
+</script>
+</body>
+
+</html>
