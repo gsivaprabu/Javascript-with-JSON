@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ARRAYS</title>
+</head>
+<h2>Links</h2>
+<ol id="links">
+</ol>
+<script>
+var info = {
+
+    //Array of objects
+
+    "full_name": "Sivaprabu Ganesan",
+    "title": "Senior Programmer",
+    "links": [{
+        "blog": "http://villageprogrammer.com"
+    }, {
+        "facebook": "http://facebook.com/gsivaprabu"
+    }, {
+        "podcast": "http://feeds.feedburner.com/gsivaprabu"
+    }, {
+        "twitter": "http://twitter.com/gsivaprabu"
+    }, {
+        "youtube": "http://www.youtube.com/gsivaprabu"
+    }]
+};
+
+var output = "";
+
+String.prototype.ucfirst = function()
+{
+    return this.charAt(0).toUpperCase() + this.substr(1);
+}
+
+for (var i = 0; i < info.links.length; i++) { // the length we check how many arrays in the links object
+
+    console.log(info.links[i]);
+
+    for (key in info.links[i]) {
+
+        if (info.links[i].hasOwnProperty(key)) {
+            output +=
+                '<li>' +
+                '<a href="' +
+                info.links[i][key] + //info.links[i] -> is links array & [key] -> each one of the key element
+                '">' +
+                key.ucfirst() +
+                '</a>' +
+                '</li>';
+            console.log(output);
+            console.log("");
+
+        } // hasOwnProperty Check
+
+    } //for each object
+
+} // for each array element
+
+console.log("Final output variable");
+console.log(output);
+
+var update = document.getElementById('links');
+update.innerHTML = output;
+
+</script>
+</body>
+
+</html>

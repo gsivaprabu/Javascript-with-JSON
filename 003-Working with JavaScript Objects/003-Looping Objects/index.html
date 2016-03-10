@@ -23,6 +23,7 @@ var info = {
 
 var output = "";
 for (key in info.links) {
+    console.log(info.links[key]);
     console.log(info.links.hasOwnProperty(key));
     if (info.links.hasOwnProperty(key)) {
         output += '<li>' + '<a href = "' + info.links[key] + '">' + key + '</a>' + '</li>';
